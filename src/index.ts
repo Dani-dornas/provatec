@@ -19,5 +19,5 @@ app.get("/course/:name/:credit", function(req:Request,res:Response){
   const {name,credit} = req.params;
   const course = new Course(name,parseInt(credit));
   console.log(course);
-  res.send("oi");
+  res.send(course);
 });
