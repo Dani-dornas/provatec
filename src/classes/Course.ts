@@ -1,4 +1,5 @@
 import { CourseProps } from "./types";
+import { File } from "../classes"
 
 export default class Course {
   static count: number = 1;
@@ -10,6 +11,8 @@ export default class Course {
     this.id = Course.count++;
     this.name = name;
     this.credit = credit;
+
+    File.append(this);
   }
 
   toJSON(): CourseProps {
