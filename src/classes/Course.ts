@@ -24,6 +24,6 @@ export default class Course {
   }
 
   toString(): string {
-    return `[Course ${this.id}: ${this.name}]`;
+    return `${this.id},  ${this.name}, ${this.credit}`;
   }
 }
