@@ -3,3 +3,8 @@ export interface CourseProps {
   name: string;
   credit: number;
 }
+
+export interface StudentProps {
+  name: string;
+  courses: CourseProps[];
+}
