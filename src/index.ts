@@ -1,7 +1,7 @@
-import express from "express";
-import routes from "./routes";
+import express, {Request, Response} from "express";
 import dotenv from "dotenv";
 import cors from "cors";
+import { Course } from "./classes";
 dotenv.config();
 
 const PORT = process.env.PORT || 3000;
@@ -15,5 +15,9 @@ app.listen(PORT, () => {
   console.log(`Rodando na porta ${PORT}`);
 });
 
-// define a rota para o pacote /routes
-app.use(routes);
+app.get("/course/:name/:credit", function(req:Request,res:Response){
+  const {name,credit} = req.params;
+  const course = new Course(name,parseInt(credit));
+  console.log(course);
+  res.send("oi");
+});
