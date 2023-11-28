@@ -1,0 +1,5 @@
+1,Matemática,3
+2,Banco de dados,4
+3,Álgebra,2
+4,Data mining,4
+5,Cloud,3
